@@ -15,7 +15,7 @@ function App() {
       <ThemeProvider theme={Theme}>
         <Container>
           <Sidebar />
-          <Container column>
+          <Container width="100%" column>
             <Header />
             <Main />
           </Container>

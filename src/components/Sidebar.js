@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const SidebarStyles = styled.div`
@@ -31,33 +31,59 @@ const SidebarBrand = styled.div`
   align-content: flex-start;
 `;
 
-const SidebarItem = styled(Link)`
+const SidebarItem = styled(NavLink)`
   font-size: 1rem;
   width: 100%;
   padding: 10px 0px 10px 15px;
   border-bottom: 1px solid gray;
   text-decoration: none;
   color: white;
+
+  &.active {
+    font-weight: bold;
+    background-color: #383838;
+  }
 `;
 
 export default function Sidebar() {
   return (
     <SidebarStyles>
       <SidebarBrand>
-        <span>643rd MP Co.</span>
+        <span>DTMS Sucks</span>
       </SidebarBrand>
-      <SidebarItem to="/" style={{ borderTop: "1px solid gray" }}>
+      <SidebarItem
+        exact
+        activeClassName="active"
+        to="/"
+        style={{ borderTop: "1px solid gray" }}
+      >
         Dashboard
       </SidebarItem>
 
-      <SidebarItem to="/calendar">Calendar</SidebarItem>
-      <SidebarItem to="/targts">TARGTS</SidebarItem>
-      <SidebarItem to="/gunnery">Gunnery</SidebarItem>
-      <SidebarItem to="/training">Training</SidebarItem>
-      <SidebarItem to="/prt">Physical Readiness</SidebarItem>
-      <SidebarItem to="/soldiers">Soldier Manager</SidebarItem>
-      <SidebarItem to="/unit">Unit Manager</SidebarItem>
-      <SidebarItem to="/settings">Settings</SidebarItem>
+      <SidebarItem activeClassName="active" to="/calendar">
+        Calendar
+      </SidebarItem>
+      <SidebarItem activeClassName="active" to="/targts">
+        TARGTS
+      </SidebarItem>
+      <SidebarItem activeClassName="active" to="/gunnery">
+        Gunnery
+      </SidebarItem>
+      <SidebarItem activeClassName="active" to="/training">
+        Training
+      </SidebarItem>
+      <SidebarItem activeClassName="active" to="/prt">
+        Physical Readiness
+      </SidebarItem>
+      <SidebarItem activeClassName="active" to="/soldiers">
+        Soldier Manager
+      </SidebarItem>
+      <SidebarItem activeClassName="active" to="/unit">
+        Unit Manager
+      </SidebarItem>
+      <SidebarItem activeClassName="active" to="/settings">
+        Settings
+      </SidebarItem>
     </SidebarStyles>
   );
 }
