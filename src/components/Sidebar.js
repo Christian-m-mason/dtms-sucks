@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 const SidebarStyles = styled.div`
   min-width: 250px;
-  height: 100vh;
-  min-height: 1000px;
+  height: 100vmax;
+
   background-color: #383838;
   box-shadow: ${(props) => props.theme.boxShadows[1]};
   display: flex;
@@ -49,7 +49,7 @@ export default function Sidebar() {
   return (
     <SidebarStyles>
       <SidebarBrand>
-        <span>DTMS Sucks</span>
+        <span>DTMS</span>
       </SidebarBrand>
       <SidebarItem
         exact

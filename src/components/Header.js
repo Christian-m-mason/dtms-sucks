@@ -5,17 +5,16 @@ import { Container } from "../styles/Layout";
 
 const HeaderStyles = styled(Container)`
   min-height: 60px;
+
   height: 60px;
   background-color: #f2f2f2;
   justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
   align-content: flex-start;
-  min-width: 500px;
 `;
 
 const HeaderItemGroup = styled.ul`
-  min-width: 400px;
   white-space: nowrap;
   li {
     height: 100%;

@@ -13,7 +13,7 @@ import PhysicalReadiness from "../pages/PhysicalReadiness";
 import UnitManager from "../pages/UnitManager";
 
 const MainLayout = styled.div`
-  margin: 3rem;
+  margin: 2rem;
 `;
 
 export default function Main() {
