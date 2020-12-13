@@ -3,15 +3,13 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const SidebarStyles = styled.div`
-  min-width: 250px;
-  height: 100vmax;
-
+  grid-area: side;
+  height: 100%;
   background-color: #383838;
   box-shadow: ${(props) => props.theme.boxShadows[1]};
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: flex-start;
 `;
 
 const SidebarBrand = styled.div`
@@ -19,7 +17,7 @@ const SidebarBrand = styled.div`
   color: #000;
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 60px;
+
   text-align: center;
   width: 100%;
   height: 60px;
@@ -28,7 +26,6 @@ const SidebarBrand = styled.div`
   align-items: center;
   box-shadow: ${(props) => props.theme.boxShadows[1]};
   z-index: 10;
-  align-content: flex-start;
 `;
 
 const SidebarItem = styled(NavLink)`
@@ -40,8 +37,12 @@ const SidebarItem = styled(NavLink)`
   color: white;
 
   &.active {
-    font-weight: bold;
-    background-color: #383838;
+    background-color: #000;
+  }
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
   }
 `;
 

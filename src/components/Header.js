@@ -1,33 +1,26 @@
 import React from "react";
 //import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Container } from "../styles/Layout";
 
 const HeaderStyles = styled.div`
+  grid-area: Header;
   display: flex;
-  width: 100%;
-  height: 60px;
-  background-color: #f2f2f2;
+  background-color: #d2d2d2;
   justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
   align-content: flex-start;
 `;
 
-const HeaderItemGroup = styled.ul`
-  white-space: nowrap;
-  li {
-    height: 100%;
-    width: 100%;
-    list-style: none;
-    display: inline;
-    white-space: nowrap;
-  }
+const HeaderItemGroup = styled.div`
+  display: flex;
+  min-width: 600px;
 `;
 
-const Search = styled.li`
+const Search = styled.div`
   background-color: #fff;
   border-radius: 20px;
+  height: 35px;
   input {
     height: 35px;
     width: 300px;
@@ -40,7 +33,7 @@ const Search = styled.li`
   }
 `;
 
-const HeaderItem = styled.li`
+const HeaderItem = styled.div`
   color: #121212;
   font-size: 1rem;
   margin: auto 0px auto 20px;

@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import { Theme } from "./styles/GlobalStyles";
 
-import { Container } from "./styles/Layout";
+import { GridLayout } from "./styles/Layout";
 import Sidebar from "./components/Sidebar";
 import Main from "./components/Main";
 import Header from "./components/Header";
@@ -13,13 +13,11 @@ function App() {
   return (
     <Router>
       <ThemeProvider theme={Theme}>
-        <Container>
+        <GridLayout>
           <Sidebar />
-          <Container column>
-            <Header />
-            <Main />
-          </Container>
-        </Container>
+          <Header />
+          <Main />
+        </GridLayout>
       </ThemeProvider>
     </Router>
   );

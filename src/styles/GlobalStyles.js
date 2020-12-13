@@ -1,11 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  *, html {
+  html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    background-color: #f2f2f2;
   }
   body {
     margin: 0;
@@ -13,9 +13,15 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Overpass', sans-serif;
     font-size: 10px;
-
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+      "Sidebar Header "
+      "SideBar Main";
   }
-
 `;
 
 export const Theme = {
