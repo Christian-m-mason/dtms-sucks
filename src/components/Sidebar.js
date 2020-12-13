@@ -49,7 +49,7 @@ export default function Sidebar() {
   return (
     <SidebarStyles>
       <SidebarBrand>
-        <span>DTMS</span>
+        <span>DTMS-Sucks</span>
       </SidebarBrand>
       <SidebarItem
         exact

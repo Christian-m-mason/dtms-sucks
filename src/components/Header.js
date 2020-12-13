@@ -3,9 +3,9 @@ import React from "react";
 import styled from "styled-components";
 import { Container } from "../styles/Layout";
 
-const HeaderStyles = styled(Container)`
-  min-height: 60px;
-
+const HeaderStyles = styled.div`
+  display: flex;
+  width: 100%;
   height: 60px;
   background-color: #f2f2f2;
   justify-content: flex-end;
